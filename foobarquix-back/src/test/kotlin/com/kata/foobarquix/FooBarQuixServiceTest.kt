@@ -13,7 +13,8 @@ class FooBarQuixApplicationTests {
 
     @TestFactory
     fun tetConvert() = listOf(
-        1 to "1")
+        1 to "1",
+        3 to "FooFoo")
         .map { (input, expected) ->
             DynamicTest.dynamicTest("when I convert $input then I get $expected") {
                 assertEquals(expected, service.convertNumber(input))
